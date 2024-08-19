@@ -2,16 +2,16 @@ import readlineSync from 'readline-sync';
 
 const stepsCount = 3;
 
-const runGame = (evenNumber) => {
+const runGame = (description, evenNumber) => {
 	console.log('Welcome to the Brain Games!');
 	const name = readlineSync.question('May I have your name?: ');
 	console.log(`Hello, ${name}!`);
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    console.log(description);
 
 	for (let i = 0; i < stepsCount; i ++) {
-        const {correctAnswer, random } = evenNumber();
+        const {correctAnswer, question } = evenNumber();
 
-		console.log(`Question: ${random}`);
+		console.log(`Question: ${question}`);
 		const answer = readlineSync.question('Your answer: ');
 		
 		if (answer.toLowerCase() === correctAnswer) {
