@@ -6,11 +6,11 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const minNum = 0;
 const maxNum = 100;
 
-const evenNumber = () => {
+const gameRound = () => {
   const question = randomNumber(minNum, maxNum);
   const isEven = question % 2 === 0;
   const correctAnswer = isEven ? 'yes' : 'no'
   return {correctAnswer, question}
 };
 
-export default () => runGame(description, evenNumber);
+export default () => runGame(description, gameRound);

@@ -22,7 +22,7 @@ const calc = (x, y, operator) => {
 };
 
 
-const evenNumber = () => {
+const gameRound = () => {
     const num1 = randomNumber(minNum, maxNum);
     const num2 = randomNumber(minNum, maxNum);
     const operatorIndex = Math.floor(Math.random() * operators.length)
@@ -32,4 +32,4 @@ const evenNumber = () => {
     return {correctAnswer, question}
 };
 
-export default () => runGame(description, evenNumber);
+export default () => runGame(description, gameRound);

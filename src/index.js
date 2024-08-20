@@ -2,14 +2,14 @@ import readlineSync from 'readline-sync';
 
 const stepsCount = 3;
 
-const runGame = (description, evenNumber) => {
+const runGame = (description, gameRound) => {
 	console.log('Welcome to the Brain Games!');
 	const name = readlineSync.question('May I have your name?: ');
 	console.log(`Hello, ${name}!`);
     console.log(description);
 
 	for (let i = 0; i < stepsCount; i ++) {
-        const {correctAnswer, question } = evenNumber();
+        const {correctAnswer, question } = gameRound();
 
 		console.log(`Question: ${question}`);
 		const answer = readlineSync.question('Your answer: ');
