@@ -24,6 +24,7 @@ make brain-calc
 make brain-gcd
 make brain-progression
 make brain-prime
+```
 
 
 ## Игра: "Проверка на четность"
