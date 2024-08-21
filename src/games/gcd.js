@@ -1,7 +1,6 @@
 import randomNumber from '../random.js';
 import runGame from '../index.js';
 
-// Описание игры
 const description = 'Find the greatest common divisor of given numbers.';
 
 const minNum = 0;

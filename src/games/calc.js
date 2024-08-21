@@ -1,7 +1,6 @@
 import randomNumber from '../random.js';
 import runGame from '../index.js';
 
-// Описание игры
 const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
