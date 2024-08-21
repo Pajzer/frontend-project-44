@@ -26,7 +26,7 @@ const runGame = (description, gameRound) => {
 			return
 		}
 	}	
-	console.log(`Congratulations, ${name}`);
+	console.log(`Congratulations, ${name}!`);
 };
 
 export default runGame;
