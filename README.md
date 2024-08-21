@@ -12,6 +12,7 @@
 ## Инструкция по запуску:
 
 ### Установка
+```
 git clone https://github.com/Pajzer/frontend-project-44
 cd frontend-project-44
 make install
