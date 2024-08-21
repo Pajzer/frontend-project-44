@@ -11,8 +11,8 @@ const gameRound = () => {
   const question = randomNumber(minNum, maxNum);
   const isEven = question % 2 === 0;
   // Правильный ответ
-  const correctAnswer = isEven ? 'yes' : 'no'
-  return { correctAnswer, question }
+  const correctAnswer = isEven ? 'yes' : 'no';
+  return { correctAnswer, question };
 };
 
 export default () => runGame(description, gameRound);
