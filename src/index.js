@@ -5,8 +5,8 @@ const stepsCount = 3;
 
 const runGame = (description, gameRound) => {
 	console.log('Welcome to the Brain Games!');
-	const name = readlineSync.question('May I have your name?: ');
-	console.log(`Hello, ${name}!`);
+	const username = readlineSync.question('May I have your name?: ');
+	console.log(`Hello, ${username}!`);
 	// Описание правил игры
     console.log(description);
 
@@ -21,11 +21,11 @@ const runGame = (description, gameRound) => {
 			console.log('Correct!');
 		} else {
 			console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-			console.log(`Let's try again, ${name}`);
+			console.log(`Let's try again, ${username}`);
 			return
 		}
 	}	
-	console.log(`Congratulations, ${name}!`);
+	console.log(`Congratulations, ${username}!`);
 };
 
 export default runGame;
