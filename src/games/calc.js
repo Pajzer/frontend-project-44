@@ -24,17 +24,13 @@ const calc = (x, y, operator) => {
 const gameRound = () => {
   const num1 = randomNumber(minNum, maxNum);
   const num2 = randomNumber(minNum, maxNum);
-  
   // Находит случайный оператор
   const operatorIndex = Math.floor(Math.random() * operators.length);
   const operator = operators[operatorIndex];
-  
   // Вопрос, на который нужно дать ответ
   const question = `${num1} ${operator} ${num2}`;
-  
   // Правильный ответ
   const correctAnswer = calc(num1, num2, operator).toString();
-  
   return { correctAnswer, question };
 };
 

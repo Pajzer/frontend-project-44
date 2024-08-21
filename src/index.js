@@ -12,10 +12,8 @@ const runGame = (description, gameRound) => {
 
   for (let i = 0; i < stepsCount; i += 1) {
     const { correctAnswer, question } = gameRound();
-
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-
     // Сверяет ответ пользователя с правильным ответом
     if (answer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
