@@ -8,7 +8,6 @@ const runGame = (description, gameRound) => {
 	const name = readlineSync.question('May I have your name?: ');
 	console.log(`Hello, ${name}!`);
 	// Описание правил игры
-	// У каждой игры оно свое
     console.log(description);
 
 	for (let i = 0; i < stepsCount; i ++) {
