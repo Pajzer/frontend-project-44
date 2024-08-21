@@ -9,7 +9,6 @@ const runGame = (description, gameRound) => {
   console.log(`Hello, ${username}!`);
   // Описание правил игры
   console.log(description);
-
   for (let i = 0; i < stepsCount; i += 1) {
     const { correctAnswer, question } = gameRound();
     console.log(`Question: ${question}`);
