@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// Максимальное количество раундов
 const stepsCount = 3;
 
 const runGame = (description, gameRound) => {
