@@ -12,7 +12,7 @@ const gameRound = () => {
   const isEven = question % 2 === 0;
   // Правильный ответ
   const correctAnswer = isEven ? 'yes' : 'no'
-  return {correctAnswer, question}
+  return { correctAnswer, question }
 };
 
 export default () => runGame(description, gameRound);

@@ -8,23 +8,23 @@ const maxNum = 100;
 
 // Является ли число простым
 const isPrime = (num) => {
-    if (num < 2) {
-        return false
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
     }
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) {
-            return false
-        }
-    }
-    return true
-}
+  }
+  return true;
+};
 
 const gameRound = () => {
   // Вопрос, на который нужно дать ответ
   const question = randomNumber(minNum, maxNum);
   // Правильный ответ
-  const correctAnswer = isPrime(question) ? 'yes' : 'no'
-  return {correctAnswer, question}
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return { correctAnswer, question };
 };
 
 export default () => runGame(description, gameRound);
