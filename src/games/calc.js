@@ -21,7 +21,7 @@ const calculate = (x, y, operator) => {
 const getRound = () => {
   const number1 = getRandomNumber(0, 50);
   const number2 = getRandomNumber(0, 50);
-  const operatorIndex = getRandomNumber(0, operators.length -1);
+  const operatorIndex = getRandomNumber(0, operators.length - 1);
   const operator = operators[operatorIndex];
   const question = `${number1} ${operator} ${number2}`;
   const correctAnswer = calculate(number1, number2, operator).toString();
