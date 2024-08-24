@@ -14,10 +14,11 @@ const getProgression = (start, mult) => {
 };
 
 const censor = (array) => {
-  const randomIndex = getRandomNumber(0, array.length - 1);
-  const hiddenValue = array[randomIndex];
-  array[randomIndex] = '..';
-  return { censoredArray: array, hiddenValue };
+  const newArray = [...array];
+  const randomIndex = getRandomNumber(0, newArray.length - 1);
+  const hiddenValue = newArray[randomIndex];
+  newArray[randomIndex] = '..';
+  return { censoredArray: newArray, hiddenValue };
 };
 
 const getRound = () => {
