@@ -2,25 +2,22 @@ import readlineSync from 'readline-sync';
 
 const stepsCount = 3;
 
-const runGame = (description, gameRound) => {
+const runGame = (description, getRound) => {
   console.log('Welcome to the Brain Games!');
   const username = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${username}!`);
-  // Описание правил игры
   console.log(description);
   for (let i = 0; i < stepsCount; i += 1) {
-    const { correctAnswer, question } = gameRound();
+    const { correctAnswer, question } = getRound();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    // Сверяет ответ пользователя с правильным ответом
-    if (answer.toLowerCase() === correctAnswer) {
-      console.log('Correct!');
-    } else {
+    if (answer.toLowerCase() !== correctAnswer) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
   }
+  console.log('Correct!');
   console.log(`Congratulations, ${username}!`);
 };
 
