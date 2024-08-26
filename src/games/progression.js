@@ -11,7 +11,6 @@ const getProgression = (start, mult, length) => {
   return result;
 };
 
-
 const censor = (array) => {
   const newArray = [...array];
   const randomIndex = getRandomNumber(0, newArray.length - 1);
