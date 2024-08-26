@@ -3,15 +3,14 @@ import runGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const getProgression = (start, mult) => {
+const getProgression = (start, mult, length) => {
   const result = [];
-  const length = getRandomNumber(5, 10);
-
   for (let i = 0; i < length; i += 1) {
     result.push(start + i * mult);
   }
   return result;
 };
+
 
 const censor = (array) => {
   const newArray = [...array];
@@ -24,7 +23,8 @@ const censor = (array) => {
 const getRound = () => {
   const startNum = getRandomNumber(1, 20);
   const startMultiple = getRandomNumber(2, 5);
-  const progression = getProgression(startNum, startMultiple);
+  const length = getRandomNumber(5, 10);
+  const progression = getProgression(startNum, startMultiple, length);
   const { censoredArray, hiddenValue } = censor(progression);
   const question = censoredArray.join(' ');
   const correctAnswer = hiddenValue.toString();
